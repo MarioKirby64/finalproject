@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" >
+        <title>Membership</title>
+        <style>
+            html {
+                background-image: url("gym-interior-background-of-dumbbells-on-rack-in-fitness-and-workout-room-photo.jpg");
+                background-repeat: repeat;
+                background-size: cover;
+            }
+
+        </style>
+        <link href="info.css" rel="stylesheet" >
+        <link href="membership.css" rel="stylesheet">
+        <script src="validate.js" defer></script>
+    </head>
+    <body>
+
+        <header>
+            <h1>Membership Plans</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">About Us</a></li>
+                    <li><a href="Membership_SignUp.html">Sign Up</a></li>
+                    <li><a href="trainer_signup.html">Get a Trainer</a></li>
+                </ul>
+            </nav>
+        </header>
+        <p>
+            Here you can sign up for a membership plan of your choosing whether it be for casual use or consist use.
+        </p>
+        <form>
+            <h1>Membership Form</h1>
+            <h4>Enter your information down below to sign up for a membership plan.</h4>
+            <label for="fname">First Name :</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter your first name here"><br> 
+            <label for="lname">Last Name :</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter your last name here"><br>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Enter your Email here"><br>
+            <label for="pNumber">Phone-number</label>
+            <input type="number" id="pNumber" name="pNumber" placeholder="Enter your Phone number "><br>
+
+            <table>
+                <tr>
+                    <td >
+                        <fieldset>
+                            <legend>Membership Type</legend>
+                            <input type="radio" id="mship1" name="plan" value="10.00" checked > <label for="mship1">1 month gym membership ($10.00)</label><br>
+                            <input type="radio" id="mship3" name="plan" value="25.00" > <label for="mship3">3 months gym membership ($24.99)</label><br>
+                            <input type="radio" id="mship6" name="plan" value="50.00" > <label for="mship6">6 months gym membership ($49.95)</label><br>
+                            <input type="radio" id="mship12" name="plan" value="90.00"  > <label for="mship12">1-year gym membership ($89.95)</label>
+                         </fieldset>
+                    </td>
+                </tr>
+            </table>
+
+            <fieldset id="creditcard">
+            <label for="cardName">Name on Card</label>
+            <input name="cardName" id="cardName" required type="text" ><br>              
+
+            <label>Choose a Credit Card</label>
+            <fieldset id="cards">
+               <label class="cardComp">
+                  <input name="credit" value="express" type="radio" required >               
+                  <span>American Express</span>
+               </label>
+               <label class="cardComp">               
+                  <input name="credit" value="discover" type="radio" >
+                  <span>Discover</span>
+               </label>
+               <label class="cardComp">                              
+                  <input name="credit" value="master" type="radio"  >
+                  <span>MasterCard</span>
+               </label>
+               <label class="cardComp">                                    
+                  <input name="credit" value="visa" type="radio"  >
+                  <span>Visa</span>
+               </label>
+            </fieldset>          
+
+            <label for="cardNumber">Credit Card Number</label>
+            <input name="cardNumber" id="cardNumber" required type="text"
+                   pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$">
+            <br>
+            <label for="expMonth">Expiration Date</label>
+            <select id="expMonth" name="expMonth">
+               <option value="mm">mm</option>
+               <option value="01">01</option>
+               <option value="02">02</option>
+               <option value="03">03</option>
+               <option value="04">04</option>
+               <option value="05">05</option>
+               <option value="06">06</option>
+               <option value="07">07</option>
+               <option value="08">08</option>
+               <option value="09">09</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+            </select>
+            <span id="separator"> / </span>
+            <select id="expYear" name="expYear">
+               <option value="yy">yy</option>
+               <option value="2022">2024</option>
+               <option value="2023">2025</option>
+               <option value="2024">2026</option>
+               <option value="2025">2027</option>
+               <option value="2026">2028</option>
+            </select>            
+            <br>
+            <label for="cvc">CVC</label>
+            <input name="cvc" id="cvc" required pattern="^\d{3,4}$" type="text">
+         </fieldset>
+         <input type="submit" id="subButton" value="Submit Payment" > 
+        </form>    
+    </body>
+</html>

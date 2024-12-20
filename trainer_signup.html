@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" >
+        <title>Trainer signup</title>
+        <style>
+            html {
+                background-image: url("gym-interior-background-of-dumbbells-on-rack-in-fitness-and-workout-room-photo.jpg");
+                background-repeat: repeat;
+                background-size: cover;
+            }
+        </style>
+        <link href="info.css" rel="stylesheet" >
+        <link href="membership.css" rel="stylesheet">
+        <script src="validate.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Trainer Finder</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">About Us</a></li>
+                    <li><a href="Membership_SignUp.html">Sign Up</a></li>
+                    <li><a href="trainer_signup.html">Get a Trainer</a></li>
+                </ul>
+            </nav>
+        </header>    
+        <p>
+            Here you can select a personal trainer of your choosing
+        </p>
+            <form>
+                <h2>Trainer form</h2>
+                <h4>Enter your information and select a trainer down below</h4>
+                <label for="fname">First Name :</label>
+                <input type="text" id="fname" name="fname" placeholder="Enter your first name here"><br/> 
+                <label for="lname">Last Name :</label>
+                <input type="text" id="lname" name="lname" placeholder="Enter your last name here"><br/>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Enter your Email here"><br/>
+                <label for="pNumber">Phone-number</label>
+                <input type="number" id="pNumber" name="pNumber" placeholder="Enter your Phone number her"><br/>
+
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <fieldset>
+                                <legend>Trainers</legend>
+                                <input type="radio" id="any" name="train" value="jeramy" checked /> <label for="plan_0">Jeramy: Can meet anywhere if need be</label><br>
+                                <input type="radio" id="inperg" name="train" value="mike" /> <label for="plan_1">Mike: In person at the gym</label><br>
+                                <input type="radio" id="inper" name="train" value="jim" /> <label for="plan_2">Jim: In person at home</label><br>
+                                <input type="radio" id="online" name="train" value="Martha"  /> <label for="plan_3">Martha: Online</label>
+                             </fieldset>
+                        </td>
+                    </tr>
+                </table>
+                <fieldset id="creditcard">
+                    <label for="cardName">Name on Card</label>
+                    <input name="cardName" id="cardName" required type="text" /><br>              
+        
+                    <label>Choose a Credit Card</label>
+                    <fieldset id="cards">
+                       <label class="cardComp">
+                          <input name="credit" value="express" type="radio" required />               
+                          <span>American Express</span>
+                       </label>
+                       <label class="cardComp">               
+                          <input name="credit" value="discover" type="radio" />
+                          <span>Discover</span>
+                       </label>
+                       <label class="cardComp">                              
+                          <input name="credit" value="master" type="radio"  />
+                          <span>MasterCard</span>
+                       </label>
+                       <label class="cardComp">                                    
+                          <input name="credit" value="visa" type="radio"  />
+                          <span>Visa</span>
+                       </label>
+                    </fieldset>          
+        
+                    <label for="cardNumber">Credit Card Number</label>
+                    <input name="cardNumber" id="cardNumber" required type="text"
+                           pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"/>
+                    <br>
+                    <label for="expMonth">Expiration Date</label>
+                    <select id="expMonth" name="expMonth">
+                       <option value="mm">mm</option>
+                       <option value="01">01</option>
+                       <option value="02">02</option>
+                       <option value="03">03</option>
+                       <option value="04">04</option>
+                       <option value="05">05</option>
+                       <option value="06">06</option>
+                       <option value="07">07</option>
+                       <option value="08">08</option>
+                       <option value="09">09</option>
+                       <option value="10">10</option>
+                       <option value="11">11</option>
+                       <option value="12">12</option>
+                    </select>
+                    <span id="separator"> / </span>
+                    <select id="expYear" name="expYear">
+                       <option value="yy">yy</option>
+                       <option value="2022">2024</option>
+                       <option value="2023">2025</option>
+                       <option value="2024">2026</option>
+                       <option value="2025">2027</option>
+                       <option value="2026">2028</option>
+                    </select>            
+                    <br>
+                    <label for="cvc">CVC</label>
+                    <input name="cvc" id="cvc" required pattern="^\d{3,4}$" type="text"/>
+                 </fieldset>
+                 <input type="submit" id="subButton" value="Submit Payment" />
+            </form>    
+    </body>
+
+</html>

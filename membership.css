@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(170, 170, 253);
+    width: 40%;
+    padding: 12px;
+}
+
+form input#cvc {
+    width: 3em;
+ }
